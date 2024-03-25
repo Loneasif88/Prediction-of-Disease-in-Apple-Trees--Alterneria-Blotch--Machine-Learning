@@ -1,0 +1,299 @@
+
+<html>
+<head>
+   
+    <style type="text/css">
+        .footer{
+            position:  fixed;
+            text-align : center;
+            bottom : 0px;
+            width: 100%;
+            background-color:white;
+            color:red;
+            font:italic;
+        }
+        .box{
+            border: 1px solid green;
+            background-color:grey;
+             position:  relative;
+             width:100%;
+        }
+        h1{
+            color:green;
+             font-family:Perpetua;
+        }
+        h4{
+             color:maroon;
+        }
+        p{
+            font-size:28px;
+            font-family:Verdana;
+        }
+        .b{
+            font-size:22px;
+        
+            color:maroon;
+            font-family:Candara;
+        }
+        .f{
+            color:green;
+            font-size:22px;
+            font-family:Perpetua;
+        }
+        u{
+            font-family:Courier;
+            color:Maroon;
+        }
+        .res1{
+         color:green;
+         font-size:22px;
+         font-family:Perpetua;
+        }
+    .res{
+    border: 1px solid green;
+    
+    }
+    </style>
+</head>
+<body bgcolor=#a3cfb4>
+
+    <center>
+
+        <h1 >Plant Protection Schedule for the Management of Fungicide  and Diseases of
+Apple (2021) </h1><br>
+  
+       {% if (inc == 0) %}
+    <div class="res">  <h4 class="res1">Result :<u> No Disease</h4></u> </div>
+       {% elif (inc == 1) %}
+    <div class="res">   <h4 class="res1">Result :<u> Highly Resistant</h4></u> </div>
+       {% elif (inc == 2) %}
+    <div class="res">  <h4 class="res1">Result :<u> Resistant</h4></u> </div>
+       {% elif (inc == 3) %}
+    <div class="res">   <h4 class="res1">Result :<u> Moderate Resistant</h4></u> </div>
+       {% elif (inc == 4) %}
+    <div class="res">   <h4  class="res1">Result :<u> Suspectable </h4></u> </div>
+       {% else %}
+    <div class="res">  <h4 class="res1">Result :<u> Highly Suspectable</h4></u>  </div>
+      
+       {%endif%}<br><br>
+       
+    
+   
+
+{%if stage == '2'%}
+<b class="f">Stage Of a Plant is <u>GREEN TIP</u></b>
+<div class="box">
+    {%if inc >2%}<br>
+     <b class="b">Treatment: Fungicide /100 lit of water(2021)</b>
+    <p>Mancozeb 75 WP (300 g) or<br>
+    Captan 50 WP1 (300 g) or<br>
+    Propineb 70 WP (300 g) or<br>
+    Zineb 75 WP (300 g).<br></p>
+    
+    {%else%}<br>
+        <b class="b">Treatment: </b>
+        <p>No Need for Sprey as of now.
+     </p>
+    {%endif%}  
+   </div>       
+{%elif stage == '3'%}
+<b class="f">Stage Of a Plant is <u>PINK BUD</u></b>
+<div class="box">
+    {%if inc >2%}<br>
+     <b class="b">Treatment: Fungicide /100 lit of water(2021)</b>
+    <p>10-14 days after II spray<br>
+    Zineb (68%) + Hexaconazole (5%) 100g or<br>
+    Dodine 65 WP 60g or<br>
+    Dodine 40 SC 90 ml or<br>
+    Fluxapyroxad 250g/l+Pyraclostrobin 250g/l 500 SC @20ml<br></p>
+    
+    {%else%}<br>
+        <b class="b">Treatment: </b>
+        <p>No Need for Sprey as of now.
+     </p>
+    {%endif%}        
+ </div>
+ 
+{%elif stage == '4'%}
+<b class="f">Stage Of a Plant is <u>Petal fall</u></b>
+<div class="box">
+    {%if inc >2%}<br>
+     <b class="b">Treatment: Fungicide /100 lit of water(2021)</b>
+    <p>When 60-70 % petal fall occurs<br>
+    Difenaconazole 25EC (30ml) or<br>
+    Flusilazole 40EC (20ml) or<br>
+    Trifloxystrobin (25%) +Tebuconazole(50%) 75 WG (40g )<br></p>
+    
+    {%else%}<br>
+         <b class="b">Treatment: </b>
+         <p>No Need for Sprey as of now.
+     </p>
+    {%endif%}  
+  </div>  
+  
+{%elif stage == '5'%}
+<b class="f">Stage Of a Plant is <u>Fruit let (Pea size)</u></b>
+<div class="box">
+    {%if inc >2%}<br>
+     <b class="b">Treatment: Fungicide /100 lit of water(2021)</b>
+    <p>10-14 days after IV spray<br>
+    Zineb (68%) + Hexaconazole ( 4%) 72WP (100g) or<br>
+    Dodine 65 WP ( 60g ) or<br>
+    Dodine 40 SC (90 ml) or<br>
+    Fluxapyroxad 250g/l+Pyraclostrobin 250g/l 500 SC @20mL<br></p>
+    
+    {%else%}<br>
+         <b class="b">Treatment: </b>
+         <p>No Need for Sprey as of now.
+     </p>
+    {%endif%}      
+ </div>
+ 
+{%elif stage == '6'%}
+<b class="f">Stage Of a Plant is <u>Fruit Development-1</u></b>
+ <div class="box">
+    {%if inc >2%}<br>
+     <b class="b">Treatment: Fungicide /100 lit of water(2021)</b>
+    <p>12-15 days after V spray<br>
+    Mancozeb 75 WP 300g or<br>
+    Captan 50 WP 300g or<br>
+    Propineb 70 WP 300g or<br>
+    Zineb 75 WP 300g or<br>
+    Ziram 80 WP 200g<br></p>
+    
+    {%else%}<br>
+         <b class="b">Treatment: </b>
+         <p>No Need for Sprey as of now.
+     </p>
+    {%endif%}     
+  </div>  
+  
+{%elif stage == '7'%}
+<b class="f">Stage Of a Plant is <u>Fruit Development-2</u></b>
+ <div class="box">
+    {%if inc >2%}<br>
+     <b class="b">Treatment: Fungicide /100 lit of water(2021)</b>
+    <h4p12-15 days after VI spray<br>
+    Metiram (55%) + Pyraclostrobin(5%) 60WG (100g) or<br>
+    Difenaconazole 25 EC (30 ml ) or<br>
+    Flusilazole - 40EC (20ml) or<br>
+    Trifloxystrobin + Tebuconazole 75WG (40g) <br></p>
+    
+    {%else%}<br>
+        <b class="b">Treatment: </b>
+        <p>No Need for Sprey as of now.
+     </p>
+    {%endif%}       
+ </div>
+ 
+{%elif stage == '8'%}
+<b class="f">Stage Of a Plant is <u>Fruit Development-3</u></b>
+ <div class="box">
+    {%if inc >2%}<br>
+     <b class="b">Treatment: Fungicide /100 lit of water(2021)</b>
+    <p>12-15 days after VII spray<br>
+    Mancozeb 75 WP 300g or<br>
+    Zineb 75 WP 300g or<br>
+    Ziram 80 WP 200g or<br>
+    Ziram 27SC 600ml or<br>
+    Chlorothalonil 75WP150g<br></p>
+    
+    {%else%}<br>
+             <b class="b">Treatment: </b>
+         <p>No Need for Sprey as of now.
+     </p>
+    {%endif%}     
+  </div>
+    
+{%elif stage == '9'%}
+<b class="f">Stage Of a Plant is <u>Fruit Development-4</u></b>
+ <div class="box">
+    {%if inc >=4%}<br>
+     <b class="b">Treatment: Fungicide /100 lit of water(2021)</b>
+   <p> Metiram(55%) +pyraclostrobin(5%) 60 WG (100g) or<br>
+    Zineb (68%) + hexaconazole (4%) 72 WP (100g) or<br>
+    Hexaconazole 5EC (50ml) or<br>
+    Myclobutanil 10 WP (70g)<br></p>
+
+    
+        {%elif inc >2%}
+            <b class="b">Treatment: Fungicide /100 lit of water(2021)</b>
+           <p> Mancozeb 75WP 300g or<br>
+            Ziram 27 SC 600ml or<br>
+            Propineb 70 WP 300g or<br>
+            Ziram 80 WP 200g <br></p>
+            {%else%}
+                <br>
+                     <b class="b">Treatment: </b>
+                 <p>No Need for Sprey as of now.
+             </p>
+        {%else%}
+            <br>
+                 <b class="b">Treatment: </b>
+             <p>No Need for Sprey as of now.
+         </p>
+    {%endif%}     
+ </div>
+ 
+{%elif stage == '10'%}
+<b class="f">Stage Of a Plant is <u>Pre-Harvest</u></b>
+ <div class="box">
+    {%if inc >2%}<br>
+     <b class="b">Treatment: Fungicide /100 lit of water(2021)</b>
+    <p>Need Based - Long term storage (20-25 days before harvest)<br>
+    Mancozeb 75WP 300g or<br>
+    Captan 50 WP 300g or<br>
+    Ziram 80 WP 200g or<br>
+    Zineb 75 WP 300g<br></p>
+    
+    {%else%}<br>
+         <b class="b">Treatment: </b>
+         <p>No Need for Sprey as of now.
+     </p>
+    {%endif%}     
+ </div>  
+  
+{%elif stage == '1'%}
+<b class="f">Stage Of a Plant is <u>Delayed Dormancy</u></b>
+<div class="box">
+    {%if inc >=1%}<br>
+     <b class="b">Treatment: Oils /100 lit of water(2021)</b>
+    <p>Horticulture Mineral Oil (2 lit.)
+     </p>
+    
+    {%else%}<br>
+     <b class="b">Treatment:</b>
+     <p>No Need for Sprey as of now.
+     </p>
+    {%endif%}      
+     </div>
+{%else%}<br>
+<div class="box">
+<b class="b">Treatment:</b>
+     <p>No Need for Sprey as of now.
+     </p>
+     </div>
+{%endif%}
+
+<div class="footer">
+Disclaimer:<br>
+• The molecules have been evaluated by SKUAST-K for bio-efficacy against apple diseases and
+pests, and the advisory/ information has been compiled for guidance and not for legal purposes.
+Horticulture / Agriculture Kashmir and Directorate of Enforcement Government of J&K.<br>
+• Use and sale of the products recommended in the schedule are subject to production of registration
+and label claim from CIB & RC, Govt. of India to be ascertained by Directorate of law enforcement
+Department of Jammu & Kashmir.<br>
+
+</div>
+<br><br>
+    
+           
+<br><br>
+    <a href='/'>Home</a>
+
+    </center>
+
+</body>
+
+</html>
+

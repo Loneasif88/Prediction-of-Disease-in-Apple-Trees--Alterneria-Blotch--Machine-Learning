@@ -1,0 +1,82 @@
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            background-image: url("{{url_for('static',filename='ap6.jpg')}}");
+           
+        }
+        .card{
+            background-color: transparent;
+            border: solid 2px green;
+        }
+        .card:hover{
+            background-color: lightcyan;
+        }
+        .card-header{
+            background-image: linear-gradient(to right top, #077bf9, #2f85fb, #448efc, #5698fd, #66a1fe, #6aa2fe, #6da4ff, #71a5ff, #6b9efe, #6697fe, #628ffc, #5f88fb);
+        }
+    </style>
+    </head>
+    <body >
+        <div class="card-header" >
+            <h1 align="center">Alterneria Blotch Prediction in Apple Trees </h1>
+        </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3">
+            
+        </div>
+        <div class="col-sm-6">
+            <form method="POST", action="{{url_for('home')}}">
+                <div class="">
+                    <div class="card">
+                        <div class="card-header" style="background-image: linear-gradient(to right top, #916bfb, #c95bdd, #ea4fbb, #fb5099, #ff5c7b, #ff5e7f, #ff6183, #ff6387, #f362ab, #d76bce, #a97aea, #5f88fb);">
+                            <h2>Enter Weather Details Here </h2>
+                        </div>
+                        <div class="card-body mt-1">
+                            <input type="text", name='a', placeholder="Enter Max Temp" required class="form-control">
+                            <input type="text", name='b', placeholder="Enter Min Temp" required class="form-control mt-1">
+                            <input type="text", name='c', placeholder="Max Humidity" required class="form-control mt-1" > 
+                            <input type="text", name='d', placeholder="Min Humidity" required  class="form-control mt-1">
+                            <input type="text", name='e', placeholder="Rain (mm)" required class="form-control mt-1">
+                            <select id="stage" name="stages" class="form-control mt-1">
+                                <option Selected required>Select Stage Of a Plant</option>
+                                <option value="1">Delayed Dormancy</option>
+                                <option value="2">Green Tip</option>
+                                <option value="3">Pink Bud</option>
+                                <option value="4">Petal Fall</option>
+                                <option value="5">Fruit Let(Pea Size)</option>
+                                <option value="6">Fruit Development-1</option>
+                                <option value="7">Fruit Development-2</option>
+                                <option value="8">Fruit Development-3</option>
+                                <option value="9">Fruit Development-4</option>
+                                <option value="10">Pre-Harvest</option>
+                                <option value="11">Post-Harvest</option>
+                            </select>
+                            <div class="card-footer">
+                            <input type="submit" value="Predict" class="btn btn-success btn-block mt-1" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            
+          
+        </form> 
+        </div>
+        <div class="col-sm-3">
+
+        </div>
+    </div>
+    
+</div>
+    </body>
+</html>

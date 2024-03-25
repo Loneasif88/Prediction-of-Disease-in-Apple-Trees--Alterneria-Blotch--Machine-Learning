@@ -1,0 +1,328 @@
+<html>
+    <head>
+        <title></title>
+       
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+            .card-header{
+                background-image: linear-gradient(to right top, #32fdd1, #00f5e8, #00ebf7, #39dffe, #66d3fd, #53d5fe, #3ad8ff, #00daff, #00eaf3, #00f7c9, #00fe85, #82ff0f);     
+                
+            }
+            .fa {
+                  padding: 10px;
+                  font-size: 30px;
+                  width: 50px;
+                  text-align: center;
+                  text-decoration: none;
+                  margin: 5px 2px;
+                  border-radius: 50%;
+                }
+
+                .fa:hover {
+                    opacity: 0.4;
+                }
+                
+                .fa-facebook {
+                  background: #1f64f8;
+                  color: white;
+                }
+                
+                .fa-twitter {
+                  background: #1a1ef5;
+                  color: white;
+                }
+                .fa-linkedin {
+                  background: #0a68f5;
+                  color: white;
+                }
+                .fa-instagram {
+                  background: #f72c2c;
+                  color: white;
+                }
+                p{
+                    font-family: verdana;
+                    font-size: 20px;
+                }
+                .size{
+                 font-size: 12px;
+                }
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="">
+            <div class="card">
+                <div class="card-header">
+                    <h2 align="center">Plant Protection Spray Schedule for the Management of Fungicide <br> & Diseases of
+                        Apple (2021) </h2>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h2 class="text-info">RESULT</h2>
+                            {% if (inc == 0) %}
+     <h4 class="text text-info">Result :<u> No Disease </u></h4>
+       {% elif (inc == 1) %}
+      <h4 class="text text-primary">Result :<u> Highly Resistant</u></h4>
+       {% elif (inc == 2) %}
+    <h4 class="text-warning"> Result :<u> Resistant</u></h4>
+       {% elif (inc == 3) %}
+    <h4 class="text-secondary">Result :<u> Moderate Resistant</h4></u> 
+       {% elif (inc == 4) %}
+    <h4  class="text text-danger">Result :<u> Suspectable </u></h4>
+       {% else %}
+    <h4 class="res1">Result :<u> Highly Suspectable</u></h4>
+      
+       {%endif%}
+                        </div>
+                        <div  class="col-sm-8">
+                            
+                        
+                <div  class="container" >
+
+
+                    {%if stage == '2'%}
+                    <h3 class="text text-warning">Stage Of a Plant is GREEN TIP</h3>
+                    
+                        {%if inc >2%}<br>
+                         <h3 class="text text-secondary"> Treatment: Fungicide /100 lit of water(2021)</h3>
+                            <p class="text text-Primary"><br>
+                         Mancozeb 75 WP (300 g) or<br>
+                        Captan 50 WP1 (300 g) or<br>
+                        Propineb 70 WP (300 g) or<br>
+                        Zineb 75 WP (300 g).<br></p>
+                        
+                        {%else%}<br>
+                        <h3 class="text text-secondary"> Treatment: </h3>
+                            <p class="text text-Primary"><br>No Need for Sprey as of now.
+                         </p>
+                        {%endif%}  
+                       </div>       
+                    {%elif stage == '3'%}
+                    <h3 class="text text-warning">Stage Of a Plant is <u>PINK BUD</u></h3>
+                        {%if inc >2%}<br>
+                        <h3 class="text text-secondary">Treatment: Fungicide /100 lit of water(2021)</h3>
+                        <p class="text tex-primary"><br>
+                        Zineb (68%) + Hexaconazole (5%) 100g or<br>
+                        Dodine 65 WP 60g or<br>
+                        Dodine 40 SC 90 ml or<br>
+                        Fluxapyroxad 250g/l+Pyraclostrobin 250g/l 500 SC @20ml<br></p>
+                        
+                        {%else%}<br>
+                        <h3 class="text text-secondary"> Treatment: </h3>
+                        <p class="text text-Primary"><br>No Need for Sprey as of now.
+                     </p>
+                        {%endif%}        
+                     
+                    {%elif stage == '4'%}
+                    <h3 class="text text-warning">Stage Of a Plant is <u>Petal fall</u></h3>
+                    <div class="box">
+                        {%if inc >2%}<br>
+                        <h3 class="text text-secondary">Treatment: Fungicide /100 lit of water(2021)</h3>
+                        <p class="text text-primary"><br>
+                        Difenaconazole 25EC (30ml) or<br>
+                        Flusilazole 40EC (20ml) or<br>
+                        Trifloxystrobin (25%) +Tebuconazole(50%) 75 WG (40g )<br></p>
+                        
+                        {%else%}<br>
+                        <h3 class="text text-secondary"> Treatment: </h3>
+                        <p class="text text-Primary"><br>No Need for Sprey as of now.
+                     </p>
+                        {%endif%}  
+                     
+                      
+                    {%elif stage == '5'%}
+                    <h3 class="text text-warning">Stage Of a Plant is <u>Fruit let (Pea size)</u></h3>
+                    
+                        {%if inc >2%}<br>
+                        <h3 class="text text-secondary">Treatment: Fungicide /100 lit of water(2021)</h3>
+                        <p class="text text-primary"><br>
+                        Zineb (68%) + Hexaconazole ( 4%) 72WP (100g) or<br>
+                        Dodine 65 WP ( 60g ) or<br>
+                        Dodine 40 SC (90 ml) or<br>
+                        Fluxapyroxad 250g/l+Pyraclostrobin 250g/l 500 SC @20mL<br></p>
+                        
+                        {%else%}<br>
+                        <h3 class="text text-secondary"> Treatment: </h3>
+                        <p class="text text-Primary"><br>No Need for Sprey as of now.
+                     </p>
+                        {%endif%}      
+                    
+                     
+                    {%elif stage == '6'%}
+                    <h3 class="text text-warning">Stage Of a Plant is <u>Fruit Development-1</u></h3>
+                     <div class="box">
+                        {%if inc >2%}<br>
+                        <h3 class="text text-secondary">Treatment: Fungicide /100 lit of water(2021)</b>
+                        <p class="text text-primary"><br>
+                        Mancozeb 75 WP 300g or<br>
+                        Captan 50 WP 300g or<br>
+                        Propineb 70 WP 300g or<br>
+                        Zineb 75 WP 300g or<br>
+                        Ziram 80 WP 200g<br></p>
+                        
+                        {%else%}<br>
+                        <h3 class="text text-secondary"> Treatment: </h3>
+                        <p class="text text-Primary"><br>No Need for Sprey as of now.
+                     </p>
+                        {%endif%}     
+                      
+                    {%elif stage == '7'%}
+                    <h3 class="text text-warning">Stage Of a Plant is <u>Fruit Development-2</u></h3>
+                     
+                        {%if inc >2%}<br>
+                        <h3 class="text text-secondary">Treatment: Fungicide /100 lit of water(2021)</h3>
+                        <p class="text text-primary"><br>
+                        Metiram (55%) + Pyraclostrobin(5%) 60WG (100g) or<br>
+                        Difenaconazole 25 EC (30 ml ) or<br>
+                        Flusilazole - 40EC (20ml) or<br> 
+                        Trifloxystrobin + Tebuconazole 75WG (40g) <br></p>
+                        
+                        {%else%}<br>
+                        <h3 class="text text-secondary"> Treatment: </h3>
+                        <p class="text text-Primary"><br>No Need for Sprey as of now.
+                     </p>
+                        {%endif%}       
+                     
+                     
+                    {%elif stage == '8'%}
+                    <h3 class="text text-warning">Stage Of a Plant is <u>Fruit Development-3</u></h3>
+                     
+                        {%if inc >2%}<br>
+                        <h3 class="text text-secondary"> Treatment: Fungicide /100 lit of water(2021)</h3>
+                        <p class="text text-primary"><br>
+                        Mancozeb 75 WP 300g or<br>
+                        Zineb 75 WP 300g or<br>
+                        Ziram 80 WP 200g or<br>
+                        Ziram 27SC 600ml or<br>
+                        Chlorothalonil 75WP150g<br></p>
+                        
+                        {%else%}<br>
+                        <h3 class="text text-secondary"> Treatment: </h3>
+                        <p class="text text-Primary"><br>No Need for Sprey as of now.
+                     </p>
+                        {%endif%}     
+                     
+                        
+                    {%elif stage == '9'%}
+                    <h3 class="text text-warning">Stage Of a Plant is <u>Fruit Development-4</u></h3>
+                    
+                        {%if inc >=4%}<br>
+                        <h3 class="text text-secondary"> Treatment: Fungicide /100 lit of water(2021)</h3>
+                       <p class="text text-primary"><br> Metiram(55%) +pyraclostrobin(5%) 60 WG (100g) or<br>
+                        Zineb (68%) + hexaconazole (4%) 72 WP (100g) or<br>
+                        Hexaconazole 5EC (50ml) or<br>
+                        Myclobutanil 10 WP (70g)<br></p>
+                    
+                        
+                        {%else%}
+                        <h3 class="text text-secondary"> Treatment: Fungicide /100 lit of water(2021)</b>
+                           <p class="text text-primary"><br> Mancozeb 75WP 300g or<br>
+                            Ziram 27 SC 600ml or<br>
+                            Propineb 70 WP 300g or<br>
+                            Ziram 80 WP 200g <br></p>
+                        {%endif%}     
+                     </div>
+                     
+                    {%elif stage == '10'%}
+                    <h3 class="text text-warning">Stage Of a Plant is <u>Pre-Harvest</u></h3>
+                     
+                        {%if inc >2%}<br>
+                        <h3 class="text text-secondary"> Treatment: Fungicide /100 lit of water(2021)</b>
+                        <p class="text text-primary"><br>
+                        Mancozeb 75WP 300g or<br>
+                        Captan 50 WP 300g or<br>
+                        Ziram 80 WP 200g or<br>
+                        Zineb 75 WP 300g<br></p>
+                        
+                        {%else%}<br>
+                             <<h3 class="text text-secondary"> Treatment: </h3>
+                             <p class="text text-Primary"><br>No Need for Sprey as of now.
+                          </p>
+                        {%endif%}     
+                   
+                      
+                    {%elif stage == '1'%}
+                    <h3 class="text text-warning">Stage Of a Plant is <u>Delayed Dormancy</u></h3>
+                    
+                        {%if inc >=1%}<br>
+                        <h3 class="text text-secondary"> Treatment: Oils /100 lit of water(2021)</b>
+                        <p class="text text-primary"><br>Horticulture Mineral Oil (2 lit.)
+                         </p>
+                        
+                        {%else%}<br>
+                        <h3 class="text text-secondary"> Treatment: </h3>
+                        <p class="text text-Primary"><br>No Need for Sprey as of now.
+                     </p>
+                        {%endif%}      
+                        
+                    {%else%}<br>
+                    
+                        <h3 class="text text-secondary"> Treatment: </h3>
+                        <p class="text text-Primary"><br>No Need for Sprey as of now.
+                     </p>
+                        
+                    {%endif%}
+                    
+
+
+                      </div>
+
+                   </div>
+                 </div>
+              </div>
+            </div>
+        </div>
+        <footer class="footer-main" style="background-image: linear-gradient(to right top, #46acf9, #57b0f7, #66b5f6, #74b9f4, #80bdf2, #82c1f3, #84c5f4, #86c9f5, #7fcef8, #79d3fa, #73d7fb, #6ddcfb);">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-sm-6 mt-1">
+                    <div class="copyright">
+                        <h3>Disclaimer</h3>
+                        <p class="size">The molecules have been evaluated by <mark>SKUAST-K</mark> for bio-efficacy against apple diseases and
+                            pests, and the advisory/ information has been compiled for guidance and not for legal purposes.
+                            Horticulture / Agriculture Kashmir and Directorate of Enforcement Government of J&K.<br>
+                            • Use and sale of the products recommended in the schedule are subject to production of registration
+                            and label claim from CIB & RC, Govt. of India to be ascertained by Directorate of law enforcement
+                            Department of Jammu & Kashmir.<br></p>
+                    </div> 
+                    </div>
+                    <div class="col-sm-6">
+                        
+                        <div class="card-body">
+                            <div class="btn btn-group">
+                                <a href="home.html" class="btn btn-light">Home</a>
+                                <a href="about.html" class="btn btn-light">About</a>
+
+                            </div>
+                                
+                                
+                        </div>
+                            <div class="card-footer">
+                                <div class="btn-group"></div>
+                                <h3>Contact us</h3>
+                                
+                                <a href="#" class="fa fa-facebook"></a>
+                                <a href="#" class="fa fa-twitter"></a>
+                                <a href="#" class="fa fa-linkedin"></a>
+                                <a href="#" class="fa fa-instagram"></a>
+                            </div>
+                    
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+    </body>
+</html>
